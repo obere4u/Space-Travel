@@ -1,0 +1,77 @@
+
+/* -------------
+|| RESET ||
+------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Reset box-sizing, margins and paddings */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height:  1.5; /* 1.4 is default height */
+    min-height: 100vh;
+}
+
+/* Make images easier to work with */
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Makes forms element easier to work with */
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* remove animation and transition for people that turn them off */
+
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -------------
+|| Utility classes ||
+------------- */
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    padding-inline: 2em; /* checks the inline which is left and right */
+    margin-inline: auto; /* checks the inline which is left and right */
+    max-width: 80rem;
+}
+
+/* Screen Reader (sr) only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
