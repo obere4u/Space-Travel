@@ -1,4 +1,36 @@
 
+/* ----------------------
+|| custom properties ||
+------------------------ */
+:root {
+    /* ------ color code ----- */
+    --clr-naturalWhite: 0 0% 100%;
+    --clr-lightBlue:231 77% 90%;
+    --clr-darkBlue: 230 35% 7%;
+
+
+    /* --- Font Sizes 
+    setting up font-sizes
+    ----- */
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
+
+
+
+
 /* -------------
 || RESET ||
 ------------- */
@@ -13,7 +45,22 @@
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+    margin: 0;
+}
+
 body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    background-color: hsl(var(--clr-darkBlue));
+    color: hsl(var(--clr-naturalWhite));
     line-height:  1.5; /* 1.4 is default height */
     min-height: 100vh;
 }
@@ -63,7 +110,7 @@ input, button, textarea, select {
     max-width: 80rem;
 }
 
-/* Screen Reader (sr) only */
+/* Screen Reader (sr) only, hides things that they shouldn't worry about*/
 .sr-only {
   position: absolute;
   width: 1px;
@@ -74,4 +121,46 @@ input, button, textarea, select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+/* -------------
+|| colors||
+------------- */
+
+.bg-dark { background-color: hsl(var(--clr-darkBlue));}
+.bg-white { background-color: hsl(var(--clr-naturalWhite));}
+.bg-accent { background-color: hsl(var(--clr-lightBlue));}
+
+text-dark { color: hsl(var(--clr-darkBlue));}
+text-white { color: hsl(var(--clr-naturalWhite));}
+text-accent {color: hsl(var(--clr-lightBlue));}
+
+/* -------------
+|| typography||
+------------- */
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1; /* line height on bigger font-size changed because it get no so good when the lines breaks */ 
 }
